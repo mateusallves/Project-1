@@ -1,5 +1,6 @@
 //import logo from './logo.svg';
 import { useEffect, useState, useCallback } from 'react';
+import {React} from 'react'
 
 import './styles.css';
 
@@ -17,7 +18,7 @@ export const Home = ()=>{
   const [searchValue, setSearchValue] = useState('')
   
   const noMorePosts = page + postsPerPages >=allPosts.length;
-  const filterPosts = !!searchValue ? 
+  const filterPosts = searchValue ? 
      allPosts.filter(post =>{
        return post.title.toLowerCase().includes(searchValue.toLowerCase());
      })
