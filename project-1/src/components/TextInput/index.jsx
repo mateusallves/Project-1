@@ -4,5 +4,6 @@ export const InputText= ({searchValue, handleChange})=>{
 return <input className='text-input'
 value={searchValue}
 onChange={handleChange}
-type="search" />
+type="search" 
+placeholder='Type your Search'/>
 }
